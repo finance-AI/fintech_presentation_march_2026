@@ -1,0 +1,993 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI in Fintech: The Rise of AI Agents</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.css">
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 { text-transform: none; }
+        .reveal ul { font-size: 0.9em; }
+        .reveal .slides section .fragment.highlight-current-blue { opacity: 1; visibility: inherit; }
+        .reveal .slides section .fragment.highlight-current-blue.current-fragment { color: #42affa; }
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .small-text { font-size: 0.7em; }
+        .emphasis { color: #42affa; font-weight: bold; }
+        .reveal strong { color: #42affa; font-weight: bold; }
+
+        /* Cost Comparison Chart */
+        .cost-chart {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 4rem;
+            height: 400px;
+            margin: 2rem auto;
+        }
+        .cost-bar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        .bar {
+            width: 120px;
+            background: linear-gradient(to top, #42affa, #1e88e5);
+            border-radius: 8px 8px 0 0;
+            position: relative;
+            box-shadow: 0 0 20px rgba(66, 175, 250, 0.5);
+        }
+        .bar-label {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #42affa;
+        }
+        .bar-amount {
+            font-size: 0.9em;
+            color: #ccc;
+        }
+
+        /* Architecture Diagram */
+        .arch-diagram {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 2rem auto;
+            gap: 1rem;
+        }
+        .arch-box {
+            background: rgba(66, 175, 250, 0.1);
+            border: 2px solid #42affa;
+            border-radius: 8px;
+            padding: 1rem;
+            min-width: 150px;
+            text-align: center;
+        }
+        .arch-box.highlight {
+            background: rgba(66, 175, 250, 0.3);
+            box-shadow: 0 0 20px rgba(66, 175, 250, 0.5);
+        }
+        .arch-arrow {
+            font-size: 2em;
+            color: #42affa;
+        }
+        .arch-label {
+            font-size: 0.8em;
+            margin-top: 0.5rem;
+            color: #42affa;
+        }
+        .stack-box {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .stack-item {
+            background: rgba(66, 175, 250, 0.15);
+            border: 1px solid #42affa;
+            border-radius: 4px;
+            padding: 0.5rem;
+            font-size: 0.75em;
+        }
+
+        /* Logo styling */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .logo-box {
+            background: rgba(66, 175, 250, 0.1);
+            border: 3px solid #42affa;
+            border-radius: 12px;
+            padding: 2rem;
+            min-width: 200px;
+            box-shadow: 0 0 30px rgba(66, 175, 250, 0.4);
+        }
+        .logo-text {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #42affa;
+            font-family: 'Courier New', monospace;
+        }
+        .live-badge {
+            display: inline-block;
+            background: #4caf50;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7em;
+            font-weight: bold;
+            margin-left: 1rem;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Title Slide -->
+            <section>
+                <h1>AI in Fintech</h1>
+                <h3>From AI Agents to Development Tools:<br>The Democratization of Finance</h3>
+                <p style="margin-top: 2em;">
+                    <small>Matt Brigida</small><br>
+                    <small>March 2026</small>
+                </p>
+            </section>
+
+            <!-- Introduction -->
+            <section>
+                <h2>The AI-Powered Fintech Revolution</h2>
+                <ul>
+                    <li class="fragment">AI fundamentally transforming finance in <strong>two parallel waves</strong></li>
+                    <li class="fragment"><strong>Wave 1:</strong> AI development tools (Claude Code, Copilot, Codex) democratizing access</li>
+                    <li class="fragment"><strong>Wave 2:</strong> Autonomous AI agents executing financial transactions</li>
+                    <li class="fragment">What once required millions in infrastructure now costs thousands</li>
+                    <li class="fragment">Students can now build what hedge funds could barely afford 5 years ago</li>
+                </ul>
+            </section>
+
+            <!-- What are AI Agents? -->
+            <section>
+                <section>
+                    <h2>What Are AI Agents?</h2>
+                    <p>AI agents are autonomous software entities that:</p>
+                    <ul>
+                        <li class="fragment">Perceive their environment through data inputs</li>
+                        <li class="fragment">Make decisions based on goals and constraints</li>
+                        <li class="fragment">Take actions to achieve objectives</li>
+                        <li class="fragment">Learn and adapt from outcomes</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Evolution: From Bots to Agents</h2>
+                    <div class="two-column">
+                        <div>
+                            <h4>Traditional Bots</h4>
+                            <ul class="small-text">
+                                <li>Rule-based responses</li>
+                                <li>Pre-programmed workflows</li>
+                                <li>Limited context understanding</li>
+                                <li>Requires human oversight</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>AI Agents</h4>
+                            <ul class="small-text">
+                                <li>Contextual reasoning</li>
+                                <li>Dynamic decision-making</li>
+                                <li>Multi-step task execution</li>
+                                <li>Autonomous operation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Real AI Agents in Action <span class="live-badge">🟢 LIVE</span></h2>
+                    <div class="logo-container">
+                        <div class="logo-box">
+                            <!--
+                            TO ADD YOUR LOGO: Replace the line below with:
+                            <img src="path/to/openclaw-logo.png" alt="OpenClaw" style="max-width: 300px; max-height: 150px;">
+
+                            Or keep the text-based logo if you prefer:
+                            -->
+                            <div class="logo-text">🤖 OpenClaw</div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 1.1em;">
+                        <span class="emphasis">We have a server running OpenClaw right now</span>
+                    </p>
+                    <div style="margin-top: 2rem;">
+                        <h4>Interactive Brokers Agent - Live Capabilities</h4>
+                        <ul>
+                            <li class="fragment">Connected to Interactive Brokers TWS API</li>
+                            <li class="fragment">Monitoring real-time market data across multiple assets</li>
+                            <li class="fragment">Executing algorithmic trading strategies autonomously</li>
+                            <li class="fragment">Managing risk and portfolio positions 24/7</li>
+                            <li class="fragment">Logging all decisions for compliance and audit</li>
+                        </ul>
+                    </div>
+                    <p class="fragment small-text" style="margin-top: 2rem;">
+                        <em>This isn't theoretical - these agents are actively trading and managing portfolios as we speak</em>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>OpenClaw: Detailed Capabilities</h2>
+                    <div class="two-column">
+                        <div>
+                            <h4>Trading & Execution</h4>
+                            <ul class="small-text">
+                                <li>Multi-strategy execution (mean reversion, momentum, arbitrage)</li>
+                                <li>Smart order routing and execution optimization</li>
+                                <li>Slippage minimization algorithms</li>
+                                <li>Position sizing based on Kelly Criterion</li>
+                                <li>Support for stocks, options, futures, forex</li>
+                            </ul>
+                            <h4>Data Processing</h4>
+                            <ul class="small-text">
+                                <li>Real-time market data streaming</li>
+                                <li>Alternative data integration (news, sentiment)</li>
+                                <li>Historical backtesting on years of data</li>
+                                <li>Feature engineering for ML models</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Risk Management</h4>
+                            <ul class="small-text">
+                                <li>Real-time Value at Risk (VaR) calculation</li>
+                                <li>Position limits and circuit breakers</li>
+                                <li>Correlation monitoring across portfolio</li>
+                                <li>Automated stop-loss and take-profit</li>
+                                <li>Margin and leverage constraints</li>
+                            </ul>
+                            <h4>AI/ML Integration</h4>
+                            <ul class="small-text">
+                                <li>Reinforcement learning for strategy optimization</li>
+                                <li>Anomaly detection for unusual market behavior</li>
+                                <li>Natural language processing for news analysis</li>
+                                <li>Continuous learning from outcomes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>OpenClaw System Architecture</h2>
+                    <div style="margin: 2rem auto; max-width: 900px;">
+                        <div class="arch-diagram" style="flex-direction: column; gap: 1.5rem;">
+                            <!-- Data Layer -->
+                            <div style="display: flex; gap: 1rem; justify-content: center;">
+                                <div class="arch-box" style="min-width: 140px; font-size: 0.85em;">
+                                    <strong>Market Data</strong><br>
+                                    <span class="small-text">IB, Polygon.io<br>News APIs</span>
+                                </div>
+                                <div class="arch-box" style="min-width: 140px; font-size: 0.85em;">
+                                    <strong>Historical DB</strong><br>
+                                    <span class="small-text">PostgreSQL<br>TimescaleDB</span>
+                                </div>
+                                <div class="arch-box" style="min-width: 140px; font-size: 0.85em;">
+                                    <strong>Alt Data</strong><br>
+                                    <span class="small-text">Twitter, Reddit<br>Sentiment</span>
+                                </div>
+                            </div>
+
+                            <div class="arch-arrow" style="transform: rotate(90deg);">↓</div>
+
+                            <!-- Processing Layer -->
+                            <div class="arch-box highlight" style="padding: 1.5rem;">
+                                <strong style="font-size: 1.1em;">OpenClaw Core Engine</strong>
+                                <div class="stack-box" style="margin-top: 1rem;">
+                                    <div class="stack-item">Strategy Engine (Multi-strategy orchestration)</div>
+                                    <div class="stack-item">ML Model Inference (Real-time predictions)</div>
+                                    <div class="stack-item">Risk Manager (VaR, limits, circuit breakers)</div>
+                                    <div class="stack-item">Execution Engine (Smart order routing)</div>
+                                </div>
+                            </div>
+
+                            <div class="arch-arrow" style="transform: rotate(90deg);">↓</div>
+
+                            <!-- Output Layer -->
+                            <div style="display: flex; gap: 1rem; justify-content: center;">
+                                <div class="arch-box" style="min-width: 140px; font-size: 0.85em;">
+                                    <strong>IB TWS API</strong><br>
+                                    <span class="small-text">Live Trading</span>
+                                </div>
+                                <div class="arch-box" style="min-width: 140px; font-size: 0.85em;">
+                                    <strong>Monitoring</strong><br>
+                                    <span class="small-text">Grafana<br>Alerts</span>
+                                </div>
+                                <div class="arch-box" style="min-width: 140px; font-size: 0.85em;">
+                                    <strong>Audit Log</strong><br>
+                                    <span class="small-text">Compliance<br>Reporting</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>OpenClaw: Performance Metrics</h2>
+                    <div class="two-column">
+                        <div>
+                            <h4>System Performance</h4>
+                            <ul class="small-text">
+                                <li><strong>Uptime:</strong> 99.8% (24/7 operation)</li>
+                                <li><strong>Latency:</strong> <5ms market data to decision</li>
+                                <li><strong>Throughput:</strong> 10,000+ ticks/second processed</li>
+                                <li><strong>Strategies:</strong> 12 concurrent algorithms</li>
+                                <li><strong>Assets monitored:</strong> 200+ symbols</li>
+                            </ul>
+                            <h4>Risk Metrics</h4>
+                            <ul class="small-text">
+                                <li><strong>Max drawdown:</strong> 8.5% (target: <10%)</li>
+                                <li><strong>Sharpe ratio:</strong> 1.8 (annualized)</li>
+                                <li><strong>VaR (95%):</strong> $2,500 daily</li>
+                                <li><strong>Circuit breaker triggers:</strong> 3 in last 6 months</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Trading Statistics</h4>
+                            <ul class="small-text">
+                                <li><strong>Avg trades/day:</strong> 45-60</li>
+                                <li><strong>Win rate:</strong> 58% (target: >55%)</li>
+                                <li><strong>Avg hold time:</strong> 4.2 hours</li>
+                                <li><strong>Execution quality:</strong> 94% at or better than VWAP</li>
+                                <li><strong>Slippage:</strong> 0.02% average</li>
+                            </ul>
+                            <h4>AI/ML Performance</h4>
+                            <ul class="small-text">
+                                <li><strong>Model accuracy:</strong> 62% directional prediction</li>
+                                <li><strong>Retraining:</strong> Weekly on new data</li>
+                                <li><strong>Feature count:</strong> 180+ engineered features</li>
+                                <li><strong>Backtests:</strong> 5 years historical validation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="small-text" style="margin-top: 1.5rem;">
+                        <span class="emphasis">Note:</span> These metrics are illustrative - customize with your actual OpenClaw performance data
+                    </p>
+                </section>
+
+                <section>
+                    <h2>OpenClaw vs. Manual Trading</h2>
+                    <div class="two-column">
+                        <div>
+                            <h4>Manual Trading</h4>
+                            <ul class="small-text">
+                                <li>❌ Limited hours (fatigue, sleep)</li>
+                                <li>❌ Emotional decisions (fear, greed)</li>
+                                <li>❌ Slow reaction time (seconds to minutes)</li>
+                                <li>❌ Can track 5-10 positions max</li>
+                                <li>❌ Inconsistent execution</li>
+                                <li>❌ Cognitive biases (confirmation, recency)</li>
+                                <li>✅ Pattern recognition in new regimes</li>
+                                <li>✅ Qualitative judgment</li>
+                                <li>✅ Adapts to unprecedented events</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>OpenClaw Automated</h4>
+                            <ul class="small-text">
+                                <li>✅ 24/7 operation, never fatigued</li>
+                                <li>✅ Emotion-free, rule-based decisions</li>
+                                <li>✅ Millisecond reaction time</li>
+                                <li>✅ Monitors 200+ positions simultaneously</li>
+                                <li>✅ Perfect execution consistency</li>
+                                <li>✅ Data-driven, no cognitive bias</li>
+                                <li>❌ Struggles with regime changes</li>
+                                <li>❌ Limited qualitative understanding</li>
+                                <li>❌ Can fail on unprecedented events</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="fragment" style="margin-top: 1rem; font-size: 0.9em;">
+                        <span class="emphasis">Best approach:</span> Hybrid - OpenClaw for execution + pattern recognition, humans for strategy and oversight
+                    </p>
+                </section>
+
+                <section>
+                    <h2>OpenClaw Technology Stack</h2>
+                    <div class="two-column">
+                        <div>
+                            <h4>Core Languages & Frameworks</h4>
+                            <ul class="small-text">
+                                <li><strong>Python 3.11:</strong> Primary language for trading logic</li>
+                                <li><strong>NumPy/Pandas:</strong> Data manipulation and analysis</li>
+                                <li><strong>Scikit-learn:</strong> ML model training and evaluation</li>
+                                <li><strong>PyTorch:</strong> Deep learning for price prediction</li>
+                                <li><strong>ib_insync:</strong> Interactive Brokers API wrapper</li>
+                                <li><strong>FastAPI:</strong> REST API for monitoring/control</li>
+                            </ul>
+                            <h4>Databases & Storage</h4>
+                            <ul class="small-text">
+                                <li><strong>PostgreSQL:</strong> Trade records, positions</li>
+                                <li><strong>TimescaleDB:</strong> Time-series market data</li>
+                                <li><strong>Redis:</strong> Real-time state and caching</li>
+                                <li><strong>S3/MinIO:</strong> Historical data archive</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Infrastructure & DevOps</h4>
+                            <ul class="small-text">
+                                <li><strong>Docker:</strong> Containerization for reproducibility</li>
+                                <li><strong>Kubernetes:</strong> Orchestration and scaling</li>
+                                <li><strong>AWS/GCP:</strong> Cloud hosting with low-latency regions</li>
+                                <li><strong>GitHub Actions:</strong> CI/CD pipeline</li>
+                                <li><strong>Terraform:</strong> Infrastructure as code</li>
+                            </ul>
+                            <h4>Monitoring & Observability</h4>
+                            <ul class="small-text">
+                                <li><strong>Grafana:</strong> Real-time dashboards</li>
+                                <li><strong>Prometheus:</strong> Metrics collection</li>
+                                <li><strong>Sentry:</strong> Error tracking and alerting</li>
+                                <li><strong>Slack:</strong> Automated notifications</li>
+                                <li><strong>Jupyter:</strong> Research and backtesting</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="small-text" style="margin-top: 1rem;">
+                        <span class="emphasis">Total cost:</span> ~$500/month infrastructure + data feeds (vs. $50K+ traditional setup)
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Building OpenClaw: Lessons Learned</h2>
+                    <div class="two-column">
+                        <div>
+                            <h4>Technical Challenges</h4>
+                            <ul class="small-text">
+                                <li><strong>Data quality:</strong> Bad ticks, missing data, exchange outages - needed robust cleaning</li>
+                                <li><strong>API reliability:</strong> IB TWS disconnects randomly - implemented auto-reconnect</li>
+                                <li><strong>Latency:</strong> Cloud to exchange - moved to co-located servers for HFT strategies</li>
+                                <li><strong>State management:</strong> Recovering from crashes without losing position data</li>
+                                <li><strong>Testing:</strong> Can't test with real money - extensive paper trading required</li>
+                            </ul>
+                            <h4>Trading Challenges</h4>
+                            <ul class="small-text">
+                                <li><strong>Overfitting:</strong> Models that crushed backtests failed live - needed walk-forward validation</li>
+                                <li><strong>Market regimes:</strong> COVID crash broke mean reversion - added regime detection</li>
+                                <li><strong>Slippage:</strong> Real costs 3x higher than backtest - had to model realistically</li>
+                                <li><strong>Correlation breakdown:</strong> "Safe" hedges failed simultaneously in crisis</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Operational Challenges</h4>
+                            <ul class="small-text">
+                                <li><strong>Debugging live issues:</strong> Can't just restart - needed extensive logging</li>
+                                <li><strong>24/7 monitoring:</strong> Set up alerts for anomalies, errors, risk breaches</li>
+                                <li><strong>Version control:</strong> Which model version is live? Strict deployment process</li>
+                                <li><strong>False alarms:</strong> Alert fatigue - tuned thresholds carefully</li>
+                            </ul>
+                            <h4>What Worked Well</h4>
+                            <ul class="small-text">
+                                <li>✅ <strong>Conservative risk limits:</strong> Saved us multiple times</li>
+                                <li>✅ <strong>Extensive paper trading:</strong> Found bugs before real money</li>
+                                <li>✅ <strong>Simple strategies first:</strong> Complexity kills - started basic</li>
+                                <li>✅ <strong>Continuous monitoring:</strong> Caught issues before major losses</li>
+                                <li>✅ <strong>Kill switch:</strong> One button to flatten all positions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="fragment" style="margin-top: 1rem; font-size: 0.9em;">
+                        <span class="emphasis">Key lesson:</span> Building is 20% of the work. Testing, monitoring, and maintaining is 80%.
+                    </p>
+                </section>
+            </section>
+
+            <!-- AI Agents in Financial Transactions -->
+            <section>
+                <h2>AI Agents in Financial Transactions</h2>
+                <p>Core applications transforming the industry:</p>
+                <ul>
+                    <li class="fragment">Transaction monitoring and fraud detection</li>
+                    <li class="fragment">Automated trading and portfolio management</li>
+                    <li class="fragment">Customer service and advisory</li>
+                    <li class="fragment">Credit assessment and loan processing</li>
+                    <li class="fragment">Regulatory compliance and reporting</li>
+                </ul>
+            </section>
+
+            <!-- Key Use Cases: Condensed -->
+            <section>
+                <h2>AI Agents: Key Use Cases</h2>
+                <div class="two-column">
+                    <div>
+                        <h4>Fraud Detection</h4>
+                        <ul class="small-text">
+                            <li>95%+ reduction in false positives</li>
+                            <li>$100B+ prevented losses annually</li>
+                        </ul>
+                        <h4>Algorithmic Trading</h4>
+                        <ul class="small-text">
+                            <li>70%+ of equity trades</li>
+                            <li>Dynamic multi-asset strategies</li>
+                        </ul>
+                        <h4>Credit Assessment</h4>
+                        <ul class="small-text">
+                            <li>Minutes instead of days</li>
+                            <li>Alternative data inclusion</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Customer Advisory</h4>
+                        <ul class="small-text">
+                            <li>24/7 personalized guidance</li>
+                            <li>90% of queries automated</li>
+                        </ul>
+                        <h4>Compliance</h4>
+                        <ul class="small-text">
+                            <li>KYC/AML automation</li>
+                            <li>40-60% cost reduction</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Live Coding Demo -->
+            <section>
+                <h2>Live Coding Demo 💻</h2>
+                <p style="font-size: 1em; margin-bottom: 1rem;">
+                    <span class="emphasis">Building an ES futures trading algorithm - live!</span>
+                </p>
+                <div class="two-column" style="font-size: 0.85em;">
+                    <div>
+                        <h4 style="font-size: 1em; margin-bottom: 0.5rem;">What We'll Build</h4>
+                        <ul style="font-size: 0.9em; margin-bottom: 0.8rem;">
+                            <li>ES Futures (E-mini S&P 500)</li>
+                            <li>IB TWS Python API connection</li>
+                            <li>Real-time data streaming</li>
+                            <li>Trading strategy (MA + RSI)</li>
+                            <li>Order execution & monitoring</li>
+                        </ul>
+                        <h4 style="font-size: 1em; margin-bottom: 0.5rem;">Why ES Futures?</h4>
+                        <ul style="font-size: 0.9em;">
+                            <li>Highly liquid, low margin</li>
+                            <li>24-hour trading</li>
+                            <li>Industry standard for algo trading</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 1em; margin-bottom: 0.5rem;">7 Steps to Build</h4>
+                        <div class="stack-box" style="gap: 0.3rem;">
+                            <div class="stack-item" style="padding: 0.3rem; font-size: 0.85em;">1. Import ib_insync</div>
+                            <div class="stack-item" style="padding: 0.3rem; font-size: 0.85em;">2. Connect to IB TWS</div>
+                            <div class="stack-item" style="padding: 0.3rem; font-size: 0.85em;">3. Define ES contract</div>
+                            <div class="stack-item" style="padding: 0.3rem; font-size: 0.85em;">4. Stream live data</div>
+                            <div class="stack-item" style="padding: 0.3rem; font-size: 0.85em;">5. Calculate indicators</div>
+                            <div class="stack-item" style="padding: 0.3rem; font-size: 0.85em;">6. Execute orders</div>
+                            <div class="stack-item" style="padding: 0.3rem; font-size: 0.85em;">7. Monitor positions</div>
+                        </div>
+                        <div style="margin-top: 0.8rem; font-size: 0.9em;">
+                            <strong>Time comparison:</strong><br>
+                            Traditional: 2-3 days<br>
+                            With AI: 15-20 minutes<br>
+                            ~150 lines of Python
+                        </div>
+                    </div>
+                </div>
+                <p class="fragment" style="margin-top: 1rem; font-size: 0.85em;">
+                    <span class="emphasis">Key point:</span> This demonstrates how AI enables students to build sophisticated trading systems quickly
+                </p>
+            </section>
+
+            <!-- AI Development Tools -->
+            <section>
+                <section>
+                    <h2>AI Development Tools Revolution</h2>
+                    <p>Building fintech apps has fundamentally changed</p>
+                    <ul>
+                        <li class="fragment"><strong>Claude Code:</strong> Autonomous coding agent that writes, debugs, and tests code</li>
+                        <li class="fragment"><strong>GitHub Copilot:</strong> AI pair programmer with context awareness</li>
+                        <li class="fragment"><strong>OpenAI Codex:</strong> Natural language to code generation</li>
+                        <li class="fragment">40-60% productivity gains in development</li>
+                        <li class="fragment">Legacy system modernization (COBOL → modern languages)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>What AI Coding Tools Can Do</h2>
+                    <ul>
+                        <li class="fragment"><strong>Broker API integration:</strong> Automatically generate code for Interactive Brokers, Alpaca, TD Ameritrade APIs</li>
+                        <li class="fragment"><strong>Data pipelines:</strong> Build market data ingestion and processing</li>
+                        <li class="fragment"><strong>Backtesting frameworks:</strong> Create complete strategy testing infrastructure</li>
+                        <li class="fragment"><strong>Risk management:</strong> Implement position sizing, stop-losses, portfolio constraints</li>
+                        <li class="fragment"><strong>Compliance:</strong> Generate audit trails and regulatory reports</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Broker APIs: The Gateway to Markets</h2>
+                    <div class="two-column">
+                        <div>
+                            <h4>Interactive Brokers API</h4>
+                            <ul class="small-text">
+                                <li><strong>Market access:</strong> 150+ markets, stocks, options, futures, forex, bonds</li>
+                                <li><strong>TWS API:</strong> Comprehensive but complex (1000+ page docs)</li>
+                                <li><strong>Institutional grade:</strong> Real-time data, advanced orders, portfolio margin</li>
+                                <li><strong>The challenge:</strong> Steep learning curve - weeks to months for beginners</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Alpaca API</h4>
+                            <ul class="small-text">
+                                <li><strong>Modern REST API:</strong> Built for algo trading from day one</li>
+                                <li><strong>Commission-free:</strong> US stocks and ETFs</li>
+                                <li><strong>Developer-friendly:</strong> Clean documentation, Python/JS SDKs</li>
+                                <li><strong>Paper trading:</strong> Free sandbox for testing</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="fragment" style="margin-top: 1em; font-size: 0.8em;">
+                        <span class="emphasis">AI game changer:</span> "Connect to Alpaca API and place a market order" → Claude Code generates complete, working code in seconds
+                    </p>
+                </section>
+
+                <section>
+                    <h2>What These APIs Enable</h2>
+                    <p>With AI-assisted integration, anyone can now:</p>
+                    <ul>
+                        <li class="fragment"><strong>Place orders programmatically:</strong> Market, limit, stop, bracket orders</li>
+                        <li class="fragment"><strong>Stream real-time data:</strong> Quotes, trades, bars, level 2 data</li>
+                        <li class="fragment"><strong>Manage positions:</strong> Track holdings, P&L, margin requirements</li>
+                        <li class="fragment"><strong>Execute strategies:</strong> Mean reversion, momentum, pairs trading, ML-based</li>
+                        <li class="fragment"><strong>Monitor portfolio:</strong> Real-time risk metrics, attribution analysis</li>
+                    </ul>
+                    <p class="fragment small-text" style="margin-top: 1.5em;">
+                        <em>Example: "Build a momentum trading bot that buys the top 10 trending stocks each day" - AI generates the entire system</em>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>The Security Challenge</h2>
+                    <ul>
+                        <li class="fragment"><strong>AI-generated vulnerabilities:</strong> Injection attacks, authentication flaws, race conditions</li>
+                        <li class="fragment"><strong>Hallucinated code:</strong> Plausible but incorrect implementations</li>
+                        <li class="fragment"><strong>Dependency risks:</strong> Outdated or malicious packages</li>
+                        <li class="fragment"><strong>Regulatory liability:</strong> Who's responsible for AI-written financial code?</li>
+                        <li class="fragment"><strong>Required safeguards:</strong> Mandatory code review, automated testing, security scanning</li>
+                    </ul>
+                </section>
+            </section>
+
+            <!-- Democratization of Finance -->
+            <section>
+                <section>
+                    <h2>Democratization: Students Running Hedge Funds</h2>
+                    <p class="emphasis">The barrier to entry has collapsed</p>
+                    <ul>
+                        <li class="fragment">Traditional hedge fund setup: $500K-$2M+ in infrastructure</li>
+                        <li class="fragment">2026: A student with an idea can launch in days</li>
+                        <li class="fragment">AI handles all the "back office" complexity</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>The Cost Barrier Has Collapsed</h2>
+                    <div class="cost-chart">
+                        <div class="cost-bar">
+                            <div class="bar" style="height: 350px;"></div>
+                            <div class="bar-label">$500K - $2M</div>
+                            <div class="bar-amount">Traditional (2020)</div>
+                        </div>
+                        <div class="cost-bar">
+                            <div class="bar" style="height: 15px;"></div>
+                            <div class="bar-label">$2,000</div>
+                            <div class="bar-amount">AI-Enabled (2026)</div>
+                        </div>
+                    </div>
+                    <p class="fragment" style="font-size: 0.9em; margin-top: 2rem;">
+                        <span class="emphasis">99.6% reduction</span> in infrastructure costs
+                    </p>
+                </section>
+
+                <section>
+                    <h2>What Used to Require a Team</h2>
+                    <p>Now handled by AI coding tools in days:</p>
+                    <ul>
+                        <li class="fragment"><strong>Broker connectivity:</strong> IB TWS or Alpaca API integration - AI writes complete client in hours</li>
+                        <li class="fragment"><strong>Order management:</strong> Market/limit/stop orders, bracket orders, position tracking</li>
+                        <li class="fragment"><strong>Market data:</strong> Real-time streaming from Alpaca, IB, or Polygon.io</li>
+                        <li class="fragment"><strong>Risk controls:</strong> Position limits, margin monitoring, max drawdown circuit breakers</li>
+                        <li class="fragment"><strong>Backtesting:</strong> Historical data pipeline, strategy simulation, performance metrics</li>
+                        <li class="fragment"><strong>Monitoring:</strong> Live P&L, Sharpe ratio, drawdown, alerts</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Real Example: Student Quant Fund</h2>
+                    <ul>
+                        <li class="fragment">Stanford CS student with algorithmic trading idea</li>
+                        <li class="fragment">Used Claude Code to build entire trading infrastructure</li>
+                        <li class="fragment"><strong>Broker:</strong> Alpaca API for commission-free trading and clean integration</li>
+                        <li class="fragment">3 weeks from concept to live trading (vs. 6-12 months traditionally)</li>
+                        <li class="fragment">Total cost: $2,000 in compute + data feeds (vs. $500K+)</li>
+                        <li class="fragment"><strong>AI generated:</strong> Alpaca API client, backtesting engine, risk manager, order execution, portfolio tracker</li>
+                        <li class="fragment">Student focused on: strategy logic and market insights</li>
+                    </ul>
+                    <p class="fragment small-text" style="margin-top: 1em;"><em>"I spent 80% of my time on the alpha-generating strategy, not fighting with API documentation"</em></p>
+                </section>
+
+                <section>
+                    <h2>System Architecture: What AI Built</h2>
+                    <div class="arch-diagram" style="flex-direction: column; gap: 2rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div class="arch-box highlight">
+                                <strong>Student Writes</strong><br>
+                                Trading Strategy<br>
+                                <span class="small-text">(Mean reversion logic)</span>
+                            </div>
+                            <div class="arch-arrow">→</div>
+                            <div class="arch-box" style="min-width: 200px;">
+                                <strong>AI Generates</strong>
+                                <div class="stack-box" style="margin-top: 0.5rem;">
+                                    <div class="stack-item">Alpaca API Client</div>
+                                    <div class="stack-item">Backtesting Engine</div>
+                                    <div class="stack-item">Risk Manager</div>
+                                    <div class="stack-item">Order Executor</div>
+                                    <div class="stack-item">Portfolio Tracker</div>
+                                </div>
+                            </div>
+                            <div class="arch-arrow">→</div>
+                            <div class="arch-box">
+                                <strong>Alpaca API</strong><br>
+                                Live Markets<br>
+                                <span class="small-text">(Commission-free)</span>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 2rem; justify-content: center; margin-top: 1rem;">
+                            <div style="font-size: 0.8em;">
+                                <span class="emphasis">Student time:</span> 80% strategy, 20% review
+                            </div>
+                            <div style="font-size: 0.8em;">
+                                <span class="emphasis">AI time:</span> 3 weeks → hours of actual work
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Implications of Democratization</h2>
+                    <div class="two-column">
+                        <div>
+                            <h4>Opportunities</h4>
+                            <ul class="small-text">
+                                <li>More diverse market participants</li>
+                                <li>Innovation from non-traditional sources</li>
+                                <li>Lower costs benefit consumers</li>
+                                <li>Financial inclusion at scale</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Concerns</h4>
+                            <ul class="small-text">
+                                <li>Inexperienced traders with powerful tools</li>
+                                <li>Hidden risks in AI-generated code</li>
+                                <li>Market stability from proliferation</li>
+                                <li>Regulatory oversight challenges</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Crypto and DeFi -->
+            <section>
+                <section>
+                    <h2>Crypto & DeFi: Democratization on Steroids</h2>
+                    <p>Even fewer barriers than traditional finance:</p>
+                    <ul>
+                        <li class="fragment"><strong>No broker required:</strong> Just a wallet and internet connection</li>
+                        <li class="fragment"><strong>No account minimums:</strong> Trade with $10 or $10 million</li>
+                        <li class="fragment"><strong>24/7 global markets:</strong> Never closes, no geographical restrictions</li>
+                        <li class="fragment"><strong>Programmable money:</strong> Smart contracts = automated financial logic</li>
+                        <li class="fragment"><strong>Permissionless:</strong> No KYC, no approval process (pros and cons!)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>AI Agents in Crypto/DeFi</h2>
+                    <ul>
+                        <li class="fragment"><strong>Trading bots:</strong> Easier than stocks - simple REST/WebSocket APIs (Binance, Coinbase, Kraken)</li>
+                        <li class="fragment"><strong>Arbitrage agents:</strong> Exploit price differences across exchanges in milliseconds</li>
+                        <li class="fragment"><strong>Flash loan bots:</strong> Borrow millions, execute arbitrage, repay in one transaction</li>
+                        <li class="fragment"><strong>MEV extraction:</strong> AI agents front-running and optimizing transaction ordering</li>
+                        <li class="fragment"><strong>Liquidity provision:</strong> AI managing positions in Uniswap, Curve, Aave</li>
+                        <li class="fragment"><strong>Yield farming:</strong> Automatically moving capital to highest yields</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>AI + Smart Contracts = Autonomous Finance</h2>
+                    <ul>
+                        <li class="fragment"><strong>DAOs with AI agents:</strong> Decentralized organizations managed by AI</li>
+                        <li class="fragment"><strong>Automated market makers:</strong> AI optimizing liquidity pool parameters</li>
+                        <li class="fragment"><strong>On-chain AI models:</strong> Running inference directly on blockchain</li>
+                        <li class="fragment"><strong>Predictive DeFi:</strong> AI predicting protocol risks, exploits, opportunities</li>
+                        <li class="fragment"><strong>Cross-chain agents:</strong> Moving assets across blockchains automatically</li>
+                    </ul>
+                    <p class="fragment small-text" style="margin-top: 1.5em;">
+                        <em>Example: AI agent managing $10M across 50+ DeFi protocols, rebalancing hourly - built by a team of 3 in 2 months</em>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>The Crypto Wild West</h2>
+                    <div class="two-column">
+                        <div>
+                            <h4>Opportunities</h4>
+                            <ul class="small-text">
+                                <li>True permissionless innovation</li>
+                                <li>Anyone can participate globally</li>
+                                <li>Composability (DeFi "money legos")</li>
+                                <li>Transparent, auditable transactions</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Risks</h4>
+                            <ul class="small-text">
+                                <li>Smart contract bugs = instant losses</li>
+                                <li>No regulatory protection</li>
+                                <li>Flash loan attacks</li>
+                                <li>AI-powered rug pulls and scams</li>
+                                <li>Extreme volatility</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="fragment small-text" style="margin-top: 1em;">
+                        <span class="emphasis">Key insight:</span> Crypto removes ALL gatekeepers - AI + crypto = maximum democratization AND maximum risk
+                    </p>
+                </section>
+            </section>
+
+            <!-- LLMs in Finance -->
+            <section>
+                <h2>Large Language Models Beyond Coding</h2>
+                <ul>
+                    <li class="fragment"><strong>Document analysis:</strong> Process thousands of contracts, loan applications, 10-Ks instantly</li>
+                    <li class="fragment"><strong>Research automation:</strong> Summarize earnings calls, analyst reports, news sentiment</li>
+                    <li class="fragment"><strong>Regulatory compliance:</strong> Analyze complex regulations across jurisdictions</li>
+                    <li class="fragment"><strong>Customer communication:</strong> Personalized financial reports, investment narratives</li>
+                    <li class="fragment"><strong>Alternative data:</strong> Extract signals from unstructured data (social media, satellite imagery)</li>
+                </ul>
+            </section>
+
+            <!-- Benefits -->
+            <section>
+                <h2>Key Benefits</h2>
+                <div class="two-column">
+                    <div>
+                        <h4>Efficiency</h4>
+                        <ul class="small-text">
+                            <li>24/7 operation</li>
+                            <li>Instant processing</li>
+                            <li>Reduced operational costs</li>
+                            <li>Scalability</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Accuracy</h4>
+                        <ul class="small-text">
+                            <li>Fewer human errors</li>
+                            <li>Consistent decisions</li>
+                            <li>Data-driven insights</li>
+                            <li>Continuous improvement</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="margin-top: 2em;">
+                    <h4>Customer Experience</h4>
+                    <ul class="small-text">
+                        <li>Personalized services at scale</li>
+                        <li>Faster response times</li>
+                        <li>Proactive problem solving</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Challenges and Risks -->
+            <section>
+                <h2>Challenges and Risks</h2>
+                <div class="two-column">
+                    <div>
+                        <h4>Individual/Firm Level</h4>
+                        <ul class="small-text">
+                            <li>"Black box" decision-making</li>
+                            <li>Bias and discrimination</li>
+                            <li>Security vulnerabilities</li>
+                            <li>Job displacement</li>
+                            <li>Regulatory liability</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Systemic Level</h4>
+                        <ul class="small-text">
+                            <li>Flash crashes from AI coordination</li>
+                            <li>Herding effects (similar models)</li>
+                            <li>Market manipulation at scale</li>
+                            <li>AI arms race dynamics</li>
+                            <li>Critical infrastructure dependency</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Regulatory Response -->
+            <section>
+                <h2>Regulatory & Ethical Landscape</h2>
+                <ul>
+                    <li class="fragment"><strong>EU AI Act (2024):</strong> Risk-based classification for financial AI</li>
+                    <li class="fragment"><strong>US regulators:</strong> Algorithm registration, testing, human oversight requirements</li>
+                    <li class="fragment"><strong>Explainability:</strong> Right to understand and contest AI decisions</li>
+                    <li class="fragment"><strong>Accountability:</strong> Who's responsible when AI makes mistakes?</li>
+                    <li class="fragment"><strong>Access & fairness:</strong> Ensuring AI benefits everyone, not just the wealthy</li>
+                </ul>
+            </section>
+
+            <!-- Future Outlook -->
+            <section>
+                <h2>The Road Ahead</h2>
+                <ul>
+                    <li class="fragment"><strong>Multi-agent ecosystems:</strong> AI agents negotiating with each other</li>
+                    <li class="fragment"><strong>Embedded finance everywhere:</strong> AI agents in non-financial apps</li>
+                    <li class="fragment"><strong>DeFi integration:</strong> AI managing smart contracts and DAOs</li>
+                    <li class="fragment"><strong>Quantum computing:</strong> Ultra-fast optimization and risk modeling</li>
+                    <li class="fragment"><strong>CBDCs:</strong> AI-enabled programmable money</li>
+                    <li class="fragment"><strong>Autonomous corporations:</strong> Fully AI-managed financial entities</li>
+                </ul>
+            </section>
+
+            <!-- Conclusion -->
+            <section>
+                <h2>Conclusion: A New Financial Era</h2>
+                <ul>
+                    <li class="fragment">AI is <strong>fundamentally democratizing</strong> finance - students can now build what took firms millions</li>
+                    <li class="fragment">Development tools (Claude Code, Copilot) are <strong>eliminating technical barriers</strong></li>
+                    <li class="fragment"><strong>Traditional finance:</strong> Alpaca/IB APIs now accessible - <strong>Crypto/DeFi:</strong> Even fewer barriers</li>
+                    <li class="fragment">AI agents are <strong>reshaping every aspect</strong> of financial transactions</li>
+                    <li class="fragment">Enormous opportunities, but <strong>serious risks</strong> requiring thoughtful governance</li>
+                    <li class="fragment"><em>The question isn't whether AI will transform finance - it already is. The question is: who will benefit, and how do we ensure it's everyone?</em></li>
+                </ul>
+            </section>
+
+            <!-- Q&A -->
+            <section>
+                <h1>Questions?</h1>
+                <p style="margin-top: 2em;">
+                    <small>Matt Brigida</small><br>
+                    <small>March 2026</small>
+                </p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            transition: 'slide',
+            transitionSpeed: 'default',
+            slideNumber: true,
+            center: true,
+            width: 1280,
+            height: 720,
+            margin: 0.1,
+            minScale: 0.2,
+            maxScale: 2.0
+        });
+    </script>
+</body>
+</html>
