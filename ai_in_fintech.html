@@ -195,70 +195,73 @@
 
                 <section>
                     <h2>Real AI Agents in Action <span class="live-badge">🟢 LIVE</span></h2>
-                    <div class="logo-container">
-                        <div class="logo-box">
-                            <!--
-                            TO ADD YOUR LOGO: Replace the line below with:
-                            <img src="path/to/openclaw-logo.png" alt="OpenClaw" style="max-width: 300px; max-height: 150px;">
-
-                            Or keep the text-based logo if you prefer:
-                            -->
-                            <div class="logo-text">🤖 OpenClaw</div>
+                    <div class="logo-container" style="margin: 1rem 0;">
+                        <div class="logo-box" style="padding: 1rem;">
+                            <!-- OpenClaw SVG Logo -->
+                            <svg width="280" height="80" viewBox="0 0 320 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Claw Icon - Simplified -->
+                                <g>
+                                    <!-- Five claws as simple rounded rectangles -->
+                                    <rect x="5" y="15" width="8" height="35" rx="4" fill="#42affa" opacity="0.7" transform="rotate(-20 9 32)"/>
+                                    <rect x="22" y="8" width="10" height="40" rx="5" fill="#42affa" opacity="0.85" transform="rotate(-10 27 28)"/>
+                                    <rect x="42" y="5" width="12" height="45" rx="6" fill="#42affa"/>
+                                    <rect x="62" y="8" width="10" height="40" rx="5" fill="#42affa" opacity="0.85" transform="rotate(10 67 28)"/>
+                                    <rect x="81" y="15" width="8" height="35" rx="4" fill="#42affa" opacity="0.7" transform="rotate(20 85 32)"/>
+                                    <ellipse cx="48" cy="55" rx="25" ry="18" fill="#42affa"/>
+                                    <circle cx="48" cy="50" r="3" fill="white" opacity="0.9"/>
+                                    <circle cx="40" cy="55" r="2" fill="white" opacity="0.8"/>
+                                    <circle cx="48" cy="60" r="2" fill="white" opacity="0.8"/>
+                                    <circle cx="56" cy="55" r="2" fill="white" opacity="0.8"/>
+                                    <line x1="48" y1="50" x2="40" y2="55" stroke="white" stroke-width="1" opacity="0.6"/>
+                                    <line x1="48" y1="50" x2="56" y2="55" stroke="white" stroke-width="1" opacity="0.6"/>
+                                    <line x1="48" y1="50" x2="48" y2="60" stroke="white" stroke-width="1" opacity="0.6"/>
+                                </g>
+                                <text x="110" y="45" font-family="'Courier New', monospace" font-size="32"
+                                      font-weight="bold" fill="#42affa">OpenClaw</text>
+                                <text x="112" y="62" font-family="Arial, sans-serif" font-size="10"
+                                      fill="#aaa" letter-spacing="2">AI TRADING PLATFORM</text>
+                            </svg>
                         </div>
                     </div>
-                    <p style="margin-top: 1rem; font-size: 1.1em;">
-                        <span class="emphasis">We have a server running OpenClaw right now</span>
+                    <p style="margin-top: 0.8rem; font-size: 0.95em;">
+                        <span class="emphasis">Running on our server right now</span>
                     </p>
-                    <div style="margin-top: 2rem;">
-                        <h4>Interactive Brokers Agent - Live Capabilities</h4>
-                        <ul>
-                            <li class="fragment">Connected to Interactive Brokers TWS API</li>
-                            <li class="fragment">Monitoring real-time market data across multiple assets</li>
-                            <li class="fragment">Executing algorithmic trading strategies autonomously</li>
-                            <li class="fragment">Managing risk and portfolio positions 24/7</li>
-                            <li class="fragment">Logging all decisions for compliance and audit</li>
+                    <div style="margin-top: 1.2rem;">
+                        <h4 style="font-size: 1.1em;">IB Agent Live Capabilities</h4>
+                        <ul style="font-size: 0.85em; line-height: 1.4;">
+                            <li class="fragment">Connected to IB TWS API</li>
+                            <li class="fragment">Real-time market data monitoring</li>
+                            <li class="fragment">Autonomous strategy execution</li>
+                            <li class="fragment">24/7 risk & portfolio management</li>
+                            <li class="fragment">Full compliance logging</li>
                         </ul>
                     </div>
-                    <p class="fragment small-text" style="margin-top: 2rem;">
-                        <em>This isn't theoretical - these agents are actively trading and managing portfolios as we speak</em>
+                    <p class="fragment" style="margin-top: 1rem; font-size: 0.75em;">
+                        <em>Active trading and portfolio management happening as we speak</em>
                     </p>
                 </section>
 
                 <section>
-                    <h2>OpenClaw: Detailed Capabilities</h2>
-                    <div class="two-column">
+                    <h2>OpenClaw: Capabilities</h2>
+                    <div class="two-column" style="font-size: 0.8em;">
                         <div>
-                            <h4>Trading & Execution</h4>
-                            <ul class="small-text">
-                                <li>Multi-strategy execution (mean reversion, momentum, arbitrage)</li>
-                                <li>Smart order routing and execution optimization</li>
-                                <li>Slippage minimization algorithms</li>
-                                <li>Position sizing based on Kelly Criterion</li>
-                                <li>Support for stocks, options, futures, forex</li>
-                            </ul>
-                            <h4>Data Processing</h4>
-                            <ul class="small-text">
+                            <h4 style="font-size: 1.1em;">Trading & Data</h4>
+                            <ul style="font-size: 0.95em; line-height: 1.4;">
+                                <li>Multi-strategy execution</li>
+                                <li>Smart order routing</li>
                                 <li>Real-time market data streaming</li>
-                                <li>Alternative data integration (news, sentiment)</li>
-                                <li>Historical backtesting on years of data</li>
-                                <li>Feature engineering for ML models</li>
+                                <li>Alternative data (news, sentiment)</li>
+                                <li>Historical backtesting</li>
                             </ul>
                         </div>
                         <div>
-                            <h4>Risk Management</h4>
-                            <ul class="small-text">
-                                <li>Real-time Value at Risk (VaR) calculation</li>
-                                <li>Position limits and circuit breakers</li>
-                                <li>Correlation monitoring across portfolio</li>
-                                <li>Automated stop-loss and take-profit</li>
-                                <li>Margin and leverage constraints</li>
-                            </ul>
-                            <h4>AI/ML Integration</h4>
-                            <ul class="small-text">
-                                <li>Reinforcement learning for strategy optimization</li>
-                                <li>Anomaly detection for unusual market behavior</li>
-                                <li>Natural language processing for news analysis</li>
-                                <li>Continuous learning from outcomes</li>
+                            <h4 style="font-size: 1.1em;">Risk & AI/ML</h4>
+                            <ul style="font-size: 0.95em; line-height: 1.4;">
+                                <li>Real-time VaR calculation</li>
+                                <li>Position limits & circuit breakers</li>
+                                <li>Reinforcement learning optimization</li>
+                                <li>Anomaly detection</li>
+                                <li>NLP for news analysis</li>
                             </ul>
                         </div>
                     </div>
@@ -319,170 +322,124 @@
                 </section>
 
                 <section>
-                    <h2>OpenClaw: Performance Metrics</h2>
-                    <div class="two-column">
+                    <h2>OpenClaw: Performance</h2>
+                    <div class="two-column" style="font-size: 0.72em;">
                         <div>
-                            <h4>System Performance</h4>
-                            <ul class="small-text">
-                                <li><strong>Uptime:</strong> 99.8% (24/7 operation)</li>
-                                <li><strong>Latency:</strong> <5ms market data to decision</li>
-                                <li><strong>Throughput:</strong> 10,000+ ticks/second processed</li>
-                                <li><strong>Strategies:</strong> 12 concurrent algorithms</li>
-                                <li><strong>Assets monitored:</strong> 200+ symbols</li>
-                            </ul>
-                            <h4>Risk Metrics</h4>
-                            <ul class="small-text">
-                                <li><strong>Max drawdown:</strong> 8.5% (target: <10%)</li>
-                                <li><strong>Sharpe ratio:</strong> 1.8 (annualized)</li>
+                            <h4 style="font-size: 1.1em;">System & Risk</h4>
+                            <ul style="line-height: 1.3;">
+                                <li><strong>Uptime:</strong> 99.8% (24/7)</li>
+                                <li><strong>Latency:</strong> <5ms data to decision</li>
+                                <li><strong>Throughput:</strong> 10K+ ticks/sec</li>
+                                <li><strong>Max drawdown:</strong> 8.5%</li>
+                                <li><strong>Sharpe ratio:</strong> 1.8</li>
                                 <li><strong>VaR (95%):</strong> $2,500 daily</li>
-                                <li><strong>Circuit breaker triggers:</strong> 3 in last 6 months</li>
                             </ul>
                         </div>
                         <div>
-                            <h4>Trading Statistics</h4>
-                            <ul class="small-text">
-                                <li><strong>Avg trades/day:</strong> 45-60</li>
-                                <li><strong>Win rate:</strong> 58% (target: >55%)</li>
-                                <li><strong>Avg hold time:</strong> 4.2 hours</li>
-                                <li><strong>Execution quality:</strong> 94% at or better than VWAP</li>
-                                <li><strong>Slippage:</strong> 0.02% average</li>
-                            </ul>
-                            <h4>AI/ML Performance</h4>
-                            <ul class="small-text">
-                                <li><strong>Model accuracy:</strong> 62% directional prediction</li>
-                                <li><strong>Retraining:</strong> Weekly on new data</li>
-                                <li><strong>Feature count:</strong> 180+ engineered features</li>
-                                <li><strong>Backtests:</strong> 5 years historical validation</li>
+                            <h4 style="font-size: 1.1em;">Trading & ML</h4>
+                            <ul style="line-height: 1.3;">
+                                <li><strong>Trades/day:</strong> 45-60</li>
+                                <li><strong>Win rate:</strong> 58%</li>
+                                <li><strong>Avg hold:</strong> 4.2 hours</li>
+                                <li><strong>Model accuracy:</strong> 62%</li>
+                                <li><strong>Features:</strong> 180+</li>
+                                <li><strong>Backtest:</strong> 5 years validated</li>
                             </ul>
                         </div>
                     </div>
-                    <p class="small-text" style="margin-top: 1.5rem;">
-                        <span class="emphasis">Note:</span> These metrics are illustrative - customize with your actual OpenClaw performance data
+                    <p style="margin-top: 0.8rem; font-size: 0.7em;">
+                        <span class="emphasis">Note:</span> Illustrative metrics - customize with your actual data
                     </p>
                 </section>
 
                 <section>
                     <h2>OpenClaw vs. Manual Trading</h2>
-                    <div class="two-column">
+                    <div class="two-column" style="font-size: 0.75em;">
                         <div>
-                            <h4>Manual Trading</h4>
-                            <ul class="small-text">
-                                <li>❌ Limited hours (fatigue, sleep)</li>
-                                <li>❌ Emotional decisions (fear, greed)</li>
-                                <li>❌ Slow reaction time (seconds to minutes)</li>
-                                <li>❌ Can track 5-10 positions max</li>
-                                <li>❌ Inconsistent execution</li>
-                                <li>❌ Cognitive biases (confirmation, recency)</li>
-                                <li>✅ Pattern recognition in new regimes</li>
+                            <h4 style="font-size: 1.2em;">Manual Trading</h4>
+                            <ul style="line-height: 1.3;">
+                                <li>❌ Limited hours, fatigue</li>
+                                <li>❌ Emotional decisions</li>
+                                <li>❌ Slow reactions (seconds)</li>
+                                <li>❌ Tracks 5-10 positions max</li>
+                                <li>✅ New regime recognition</li>
                                 <li>✅ Qualitative judgment</li>
-                                <li>✅ Adapts to unprecedented events</li>
                             </ul>
                         </div>
                         <div>
-                            <h4>OpenClaw Automated</h4>
-                            <ul class="small-text">
-                                <li>✅ 24/7 operation, never fatigued</li>
-                                <li>✅ Emotion-free, rule-based decisions</li>
-                                <li>✅ Millisecond reaction time</li>
-                                <li>✅ Monitors 200+ positions simultaneously</li>
-                                <li>✅ Perfect execution consistency</li>
-                                <li>✅ Data-driven, no cognitive bias</li>
-                                <li>❌ Struggles with regime changes</li>
-                                <li>❌ Limited qualitative understanding</li>
-                                <li>❌ Can fail on unprecedented events</li>
+                            <h4 style="font-size: 1.2em;">OpenClaw Automated</h4>
+                            <ul style="line-height: 1.3;">
+                                <li>✅ 24/7, never fatigued</li>
+                                <li>✅ Emotion-free decisions</li>
+                                <li>✅ Millisecond reactions</li>
+                                <li>✅ Monitors 200+ positions</li>
+                                <li>❌ Regime change struggles</li>
+                                <li>❌ Limited qualitative insight</li>
                             </ul>
                         </div>
                     </div>
-                    <p class="fragment" style="margin-top: 1rem; font-size: 0.9em;">
-                        <span class="emphasis">Best approach:</span> Hybrid - OpenClaw for execution + pattern recognition, humans for strategy and oversight
+                    <p class="fragment" style="margin-top: 0.8rem; font-size: 0.8em;">
+                        <span class="emphasis">Best approach:</span> Hybrid - automation for execution, humans for strategy
                     </p>
                 </section>
 
                 <section>
-                    <h2>OpenClaw Technology Stack</h2>
-                    <div class="two-column">
+                    <h2>OpenClaw Tech Stack</h2>
+                    <div class="two-column" style="font-size: 0.7em;">
                         <div>
-                            <h4>Core Languages & Frameworks</h4>
-                            <ul class="small-text">
-                                <li><strong>Python 3.11:</strong> Primary language for trading logic</li>
-                                <li><strong>NumPy/Pandas:</strong> Data manipulation and analysis</li>
-                                <li><strong>Scikit-learn:</strong> ML model training and evaluation</li>
-                                <li><strong>PyTorch:</strong> Deep learning for price prediction</li>
-                                <li><strong>ib_insync:</strong> Interactive Brokers API wrapper</li>
-                                <li><strong>FastAPI:</strong> REST API for monitoring/control</li>
-                            </ul>
-                            <h4>Databases & Storage</h4>
-                            <ul class="small-text">
-                                <li><strong>PostgreSQL:</strong> Trade records, positions</li>
-                                <li><strong>TimescaleDB:</strong> Time-series market data</li>
-                                <li><strong>Redis:</strong> Real-time state and caching</li>
-                                <li><strong>S3/MinIO:</strong> Historical data archive</li>
+                            <h4 style="font-size: 1.15em;">Core & Data</h4>
+                            <ul style="line-height: 1.3;">
+                                <li><strong>Python 3.11</strong> - Trading logic</li>
+                                <li><strong>NumPy/Pandas</strong> - Data analysis</li>
+                                <li><strong>PyTorch</strong> - Deep learning</li>
+                                <li><strong>ib_insync</strong> - IB API wrapper</li>
+                                <li><strong>PostgreSQL/TimescaleDB</strong> - Storage</li>
+                                <li><strong>Redis</strong> - Real-time caching</li>
                             </ul>
                         </div>
                         <div>
-                            <h4>Infrastructure & DevOps</h4>
-                            <ul class="small-text">
-                                <li><strong>Docker:</strong> Containerization for reproducibility</li>
-                                <li><strong>Kubernetes:</strong> Orchestration and scaling</li>
-                                <li><strong>AWS/GCP:</strong> Cloud hosting with low-latency regions</li>
-                                <li><strong>GitHub Actions:</strong> CI/CD pipeline</li>
-                                <li><strong>Terraform:</strong> Infrastructure as code</li>
-                            </ul>
-                            <h4>Monitoring & Observability</h4>
-                            <ul class="small-text">
-                                <li><strong>Grafana:</strong> Real-time dashboards</li>
-                                <li><strong>Prometheus:</strong> Metrics collection</li>
-                                <li><strong>Sentry:</strong> Error tracking and alerting</li>
-                                <li><strong>Slack:</strong> Automated notifications</li>
-                                <li><strong>Jupyter:</strong> Research and backtesting</li>
+                            <h4 style="font-size: 1.15em;">Infrastructure</h4>
+                            <ul style="line-height: 1.3;">
+                                <li><strong>Docker/Kubernetes</strong> - Containers</li>
+                                <li><strong>AWS/GCP</strong> - Cloud hosting</li>
+                                <li><strong>Grafana/Prometheus</strong> - Monitoring</li>
+                                <li><strong>GitHub Actions</strong> - CI/CD</li>
+                                <li><strong>Jupyter</strong> - Research</li>
                             </ul>
                         </div>
                     </div>
-                    <p class="small-text" style="margin-top: 1rem;">
-                        <span class="emphasis">Total cost:</span> ~$500/month infrastructure + data feeds (vs. $50K+ traditional setup)
+                    <p style="margin-top: 0.8rem; font-size: 0.75em;">
+                        <span class="emphasis">Cost:</span> ~$500/month (vs. $50K+ traditional)
                     </p>
                 </section>
 
                 <section>
-                    <h2>Building OpenClaw: Lessons Learned</h2>
-                    <div class="two-column">
+                    <h2>Lessons Learned</h2>
+                    <div class="two-column" style="font-size: 0.7em;">
                         <div>
-                            <h4>Technical Challenges</h4>
-                            <ul class="small-text">
-                                <li><strong>Data quality:</strong> Bad ticks, missing data, exchange outages - needed robust cleaning</li>
-                                <li><strong>API reliability:</strong> IB TWS disconnects randomly - implemented auto-reconnect</li>
-                                <li><strong>Latency:</strong> Cloud to exchange - moved to co-located servers for HFT strategies</li>
-                                <li><strong>State management:</strong> Recovering from crashes without losing position data</li>
-                                <li><strong>Testing:</strong> Can't test with real money - extensive paper trading required</li>
-                            </ul>
-                            <h4>Trading Challenges</h4>
-                            <ul class="small-text">
-                                <li><strong>Overfitting:</strong> Models that crushed backtests failed live - needed walk-forward validation</li>
-                                <li><strong>Market regimes:</strong> COVID crash broke mean reversion - added regime detection</li>
-                                <li><strong>Slippage:</strong> Real costs 3x higher than backtest - had to model realistically</li>
-                                <li><strong>Correlation breakdown:</strong> "Safe" hedges failed simultaneously in crisis</li>
+                            <h4 style="font-size: 1.15em;">Challenges</h4>
+                            <ul style="line-height: 1.3;">
+                                <li><strong>Data quality</strong> - Robust cleaning needed</li>
+                                <li><strong>API reliability</strong> - Auto-reconnect logic</li>
+                                <li><strong>Overfitting</strong> - Walk-forward validation</li>
+                                <li><strong>Slippage</strong> - 3x higher than backtest</li>
+                                <li><strong>24/7 monitoring</strong> - Alert systems critical</li>
+                                <li><strong>Debugging live</strong> - Extensive logging</li>
                             </ul>
                         </div>
                         <div>
-                            <h4>Operational Challenges</h4>
-                            <ul class="small-text">
-                                <li><strong>Debugging live issues:</strong> Can't just restart - needed extensive logging</li>
-                                <li><strong>24/7 monitoring:</strong> Set up alerts for anomalies, errors, risk breaches</li>
-                                <li><strong>Version control:</strong> Which model version is live? Strict deployment process</li>
-                                <li><strong>False alarms:</strong> Alert fatigue - tuned thresholds carefully</li>
-                            </ul>
-                            <h4>What Worked Well</h4>
-                            <ul class="small-text">
-                                <li>✅ <strong>Conservative risk limits:</strong> Saved us multiple times</li>
-                                <li>✅ <strong>Extensive paper trading:</strong> Found bugs before real money</li>
-                                <li>✅ <strong>Simple strategies first:</strong> Complexity kills - started basic</li>
-                                <li>✅ <strong>Continuous monitoring:</strong> Caught issues before major losses</li>
-                                <li>✅ <strong>Kill switch:</strong> One button to flatten all positions</li>
+                            <h4 style="font-size: 1.15em;">What Worked</h4>
+                            <ul style="line-height: 1.3;">
+                                <li>✅ Conservative risk limits</li>
+                                <li>✅ Extensive paper trading</li>
+                                <li>✅ Simple strategies first</li>
+                                <li>✅ Continuous monitoring</li>
+                                <li>✅ Kill switch (flatten all)</li>
                             </ul>
                         </div>
                     </div>
-                    <p class="fragment" style="margin-top: 1rem; font-size: 0.9em;">
-                        <span class="emphasis">Key lesson:</span> Building is 20% of the work. Testing, monitoring, and maintaining is 80%.
+                    <p class="fragment" style="margin-top: 0.8rem; font-size: 0.75em;">
+                        <span class="emphasis">Key lesson:</span> Building is 20%, testing/monitoring/maintaining is 80%
                     </p>
                 </section>
             </section>
