@@ -174,7 +174,8 @@
         <div class="reveal">
             <div class="slides">
                 <!-- Title Slide -->
-                <section data-background-image="./city_skyline.jpg">
+                <!-- <section data-background-image="./city_skyline.jpg"> -->
+                <section>
                     <h1>AI in Fintech</h1>
                     <h3>
                         The Democratization of Finance
@@ -229,6 +230,7 @@
                                 <strong>OpenAI Codex:</strong> Natural language
                                 to code generation
                             </li>
+			    <!---
                             <li class="fragment">
                                 40-60% productivity gains in development
                             </li>
@@ -236,6 +238,7 @@
                                 Legacy system modernization (COBOL → modern
                                 languages)
                             </li>
+			    -->
                         </ul>
                 </section>
 
@@ -326,7 +329,7 @@
                             seconds
                         </p>
                 </section>
-
+<!---
                 <section>
                     <h2>What These APIs Enable</h2>
                         <p>With AI-assisted integration, anyone can now:</p>
@@ -391,18 +394,21 @@
                             </li>
                         </ul>
                 </section>
+
+-->
+
                 <!-- Live Coding Demo -->
                 <section>
                     <h2>Student Coding Project 💻</h2>
                         <p style="font-size: 1.1em; margin-bottom: 1.5rem">
                             <span class="emphasis"
-                                >Building an ES futures trading algorithm
+                                >ES futures trading algorithm
                                </span
                             >
                         </p>
-                        <div class="two-column">
-                            <div>
-                                <h4>What We'll Build</h4>
+                        <!-- <div class="two-column"> -->
+                            <!-- <div> -->
+                                <h4>What We Built</h4>
                                 <ul>
                                     <li class="fragment">ES Futures (E-mini S&P 500)</li>
                                     <li class="fragment">IB TWS Python API connection</li>
@@ -410,8 +416,8 @@
                                     <li class="fragment">Trading strategy (MA + RSI)</li>
                                     <li class="fragment">Order execution & monitoring</li>
                                 </ul>
-                            </div>
-                            <div>
+                            <!-- </div> -->
+                            <!-- <div>
                                 <h4>Why ES Futures?</h4>
                                 <ul>
                                     <li class="fragment">Highly liquid (millions of contracts daily)</li>
@@ -420,7 +426,7 @@
                                     <li class="fragment">Industry standard for algo trading</li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
                 </section>
 
                 <section>
@@ -429,9 +435,9 @@
                                 <div class="stack-item">1. Import ib_insync library and connect to IB TWS/Gateway</div>
                                 <div class="stack-item">2. Define ES futures contract</div>
                                 <div class="stack-item">3. Stream live market data</div>
-                                <div class="stack-item"><span class="fragment highlight-current-green">4. Alpha Strategy (spend 90% of time here)</span></div>
+                                <div class="stack-item"><span class="fragment highlight-current-green">4. Alpha Strategy (spend 80% of time here)</span></div>
                                 <div class="stack-item">5. Execute orders with risk controls</div>
-                                <div class="stack-item">6. Monitor positions and P&L</div>
+                                <div class="stack-item">6. Monitor positions and P&L (dashboards)</div>
                             </div>
                             <div style="margin-top: 2rem; font-size: 0.95em;">
                                 <div class="two-column">
@@ -454,7 +460,7 @@
 
 
                 <!-- Democratization of Finance -->
-                <section>
+                <!-- <section>
                     <h2>Democratization: Students Running Hedge Funds</h2>
                         <p class="emphasis">
                             The barrier to entry has collapsed
@@ -471,8 +477,8 @@
                                 AI handles all the "back office" complexity
                             </li>
                         </ul>
-                </section>
-
+                </section> -->
+<!---
                 <section>
                     <h2>The Cost Barrier Has Collapsed</h2>
                         <div class="cost-chart">
@@ -495,8 +501,9 @@
                             infrastructure costs
                         </p>
                 </section>
+-->
 
-                <section>
+                <!-- <section>
                     <h2>What Used to Require a Team</h2>
                         <p>Now handled by AI coding tools in days:</p>
                         <ul>
@@ -528,9 +535,9 @@
                                 ratio, drawdown, alerts
                             </li>
                         </ul>
-                </section>
+                </section> -->
 
-                <section>
+                <!-- <section>
                     <h2>Real Example: Student Quant Fund</h2>
                         <ul>
                             <li class="fragment">
@@ -570,10 +577,10 @@
                                 documentation"</em
                             >
                         </p>
-                </section>
+                </section> -->
 
                 <section>
-                    <h2>System Architecture: What AI Built</h2>
+                    <h2>Idea Architecture</h2>
                         <div
                             class="arch-diagram"
                             style="flex-direction: column; gap: 2rem"
@@ -586,7 +593,7 @@
                                 "
                             >
                                 <div class="arch-box highlight">
-                                    <strong>Student Writes</strong><br />
+                                    <strong>Student Thinks of a</strong><br />
                                     Trading Strategy<br />
                                     <span class="small-text"
                                         >(Mean reversion logic)</span
@@ -600,7 +607,7 @@
                                         style="margin-top: 0.5rem"
                                     >
                                         <div class="stack-item">
-                                            Alpaca API Client
+                                            Broker API Client
                                         </div>
                                         <div class="stack-item">
                                             Backtesting Engine
@@ -618,11 +625,9 @@
                                 </div>
                                 <div class="arch-arrow">→</div>
                                 <div class="arch-box">
-                                    <strong>Alpaca API</strong><br />
+                                    <strong>Broker API</strong><br />
                                     Live Markets<br />
-                                    <span class="small-text"
-                                        >(Commission-free)</span
-                                    >
+                                    
                                 </div>
                             </div>
                             <div
@@ -637,10 +642,10 @@
                                     <span class="emphasis">Student time:</span>
                                     80% strategy, 20% review
                                 </div>
-                                <div style="font-size: 0.8em">
+                                <!-- <div style="font-size: 0.8em">
                                     <span class="emphasis">AI time:</span> 3
                                     weeks → hours of actual work
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                 </section>
@@ -651,12 +656,10 @@
                             <div>
                                 <h4>Opportunities</h4>
                                 <ul class="small-text">
-                                    <li>More diverse market participants</li>
                                     <li>
                                         Innovation from non-traditional sources
                                     </li>
                                     <li>Lower costs benefit consumers</li>
-                                    <li>Financial inclusion at scale</li>
                                 </ul>
                             </div>
                             <div>
@@ -672,6 +675,35 @@
                                 </ul>
                             </div>
                         </div>
+                </section>
+
+                <section>
+                    <h2>Large Language Models Beyond Coding</h2>
+                    <ul>
+                        <li class="fragment">
+                            <strong>Document analysis:</strong> Process
+                            thousands of contracts, loan applications, 10-Ks
+                            instantly
+                        </li>
+                        <li class="fragment">
+                            <strong>Research automation:</strong> Summarize
+                            earnings calls, analyst reports, news sentiment
+                        </li>
+                        <li class="fragment">
+                            <strong>Regulatory compliance:</strong> Analyze
+                            complex regulations across jurisdictions
+                        </li>
+                        <li class="fragment">
+                            <strong>Customer communication:</strong>
+                            Personalized financial reports, investment
+                            narratives
+                        </li>
+                        <li class="fragment">
+                            <strong>Alternative data:</strong> Extract signals
+                            from unstructured data (social media, satellite
+                            imagery)
+                        </li>
+                    </ul>
                 </section>
 
                 <!-- What are AI Agents? -->
@@ -719,6 +751,36 @@
                 </section>
 
                 <section>
+                    <h2>Why AI Agents Are a Game Changer</h2>
+                        <p style="font-size: 0.95em; margin-bottom: 1rem;">Trading is just the beginning &mdash; agents will handle <strong>every financial task</strong></p>
+                        <div class="two-column" style="font-size: 0.78em;">
+                            <div>
+                                <h4 style="font-size: 1.1em;">What People Do Today</h4>
+                                <ul style="line-height: 1.4;">
+                                    <li class="fragment">Manually compare mortgage rates across lenders</li>
+                                    <li class="fragment">Spend hours on tax prep gathering documents</li>
+                                    <li class="fragment">Call insurance companies to dispute claims</li>
+                                    <li class="fragment">Guess at 401(k) allocations once a year</li>
+                                    <li class="fragment">Overdraft because they forgot a bill</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1.1em;">What Agents Will Do</h4>
+                                <ul style="line-height: 1.4;">
+                                    <li class="fragment">Negotiate your mortgage, monitor rates, auto-refi</li>
+                                    <li class="fragment">Continuously organize receipts, file &amp; optimize taxes</li>
+                                    <li class="fragment">File claims, escalate disputes, track resolution</li>
+                                    <li class="fragment">Rebalance retirement portfolio daily based on goals</li>
+                                    <li class="fragment">Forecast cash flow, move money, prevent overdrafts</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="fragment" style="font-size: 0.85em; margin-top: 1.2rem;">
+                            <span class="emphasis">The shift:</span> From &ldquo;I use an app to check my balance&rdquo; to &ldquo;an agent manages my entire financial life&rdquo;
+                        </p>
+                </section>
+
+                <section>
                     <h2>
                         Real AI Agents in Action
                             <span class="live-badge">🟢 LIVE</span>
@@ -758,7 +820,7 @@
                         </div>
                 </section>
 
-                <section>
+                <!-- <section>
                     <h2>OpenClaw: Capabilities</h2>
                         <div class="two-column" style="font-size: 0.8em">
                             <div>
@@ -782,203 +844,65 @@
                                 </ul>
                             </div>
                         </div>
-                </section>
+                </section> -->
 
                 <section>
                     <h2>OpenClaw System Architecture</h2>
-                        <div style="margin: 2rem auto; max-width: 900px">
-                            <div
-                                class="arch-diagram"
-                                style="flex-direction: column; gap: 1.5rem"
-                            >
-                                <!-- Data Layer -->
-                                <div
-                                    style="
-                                        display: flex;
-                                        gap: 1rem;
-                                        justify-content: center;
-                                    "
-                                >
-                                    <div
-                                        class="arch-box"
-                                        style="
-                                            min-width: 140px;
-                                            font-size: 0.85em;
-                                        "
-                                    >
-                                        <strong>Market Data</strong><br />
-                                        <span class="small-text"
-                                            >IB, Polygon.io<br />News APIs</span
-                                        >
+                        <div style="margin: 1.5rem auto; max-width: 1050px;">
+                            <div style="display: flex; align-items: center; gap: 0.8rem; justify-content: center;">
+                                <!-- Data Sources -->
+                                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <div class="arch-box" style="padding: 0.6rem; font-size: 0.7em; min-width: 120px;">
+                                        <strong>Market Data</strong><br>
+                                        <span class="small-text">IB, Polygon.io</span>
                                     </div>
-                                    <div
-                                        class="arch-box"
-                                        style="
-                                            min-width: 140px;
-                                            font-size: 0.85em;
-                                        "
-                                    >
-                                        <strong>Historical DB</strong><br />
-                                        <span class="small-text"
-                                            >PostgreSQL<br />TimescaleDB</span
-                                        >
+                                    <div class="arch-box" style="padding: 0.6rem; font-size: 0.7em; min-width: 120px;">
+                                        <strong>Historical DB</strong><br>
+                                        <span class="small-text">TimescaleDB</span>
                                     </div>
-                                    <div
-                                        class="arch-box"
-                                        style="
-                                            min-width: 140px;
-                                            font-size: 0.85em;
-                                        "
-                                    >
-                                        <strong>Alt Data</strong><br />
-                                        <span class="small-text"
-                                            >Twitter, Reddit<br />Sentiment</span
-                                        >
+                                    <div class="arch-box" style="padding: 0.6rem; font-size: 0.7em; min-width: 120px;">
+                                        <strong>Alt Data</strong><br>
+                                        <span class="small-text">News, Sentiment</span>
                                     </div>
                                 </div>
 
-                                <div
-                                    class="arch-arrow"
-                                    style="transform: rotate(90deg)"
-                                >
-                                    ↓
-                                </div>
+                                <div class="arch-arrow" style="font-size: 1.8em;">→</div>
 
-                                <!-- Processing Layer -->
-                                <div
-                                    class="arch-box highlight"
-                                    style="padding: 1.5rem"
-                                >
-                                    <strong style="font-size: 1.1em"
-                                        >OpenClaw Core Engine</strong
-                                    >
-                                    <div
-                                        class="stack-box"
-                                        style="margin-top: 1rem"
-                                    >
-                                        <div class="stack-item">
-                                            Strategy Engine (Multi-strategy
-                                            orchestration)
-                                        </div>
-                                        <div class="stack-item">
-                                            ML Model Inference (Real-time
-                                            predictions)
-                                        </div>
-                                        <div class="stack-item">
-                                            Risk Manager (VaR, limits, circuit
-                                            breakers)
-                                        </div>
-                                        <div class="stack-item">
-                                            Execution Engine (Smart order
-                                            routing)
-                                        </div>
+                                <!-- Core Engine -->
+                                <div class="arch-box highlight" style="padding: 1rem; min-width: 260px;">
+                                    <strong style="font-size: 0.95em;">OpenClaw Core</strong>
+                                    <div class="stack-box" style="margin-top: 0.5rem;">
+                                        <div class="stack-item" style="padding: 0.3rem 0.5rem; font-size: 0.7em;">Strategy Engine</div>
+                                        <div class="stack-item" style="padding: 0.3rem 0.5rem; font-size: 0.7em;">ML Inference</div>
+                                        <div class="stack-item" style="padding: 0.3rem 0.5rem; font-size: 0.7em;">Risk Manager</div>
+                                        <div class="stack-item" style="padding: 0.3rem 0.5rem; font-size: 0.7em;">Execution Engine</div>
                                     </div>
                                 </div>
 
-                                <div
-                                    class="arch-arrow"
-                                    style="transform: rotate(90deg)"
-                                >
-                                    ↓
-                                </div>
+                                <div class="arch-arrow" style="font-size: 1.8em;">→</div>
 
-                                <!-- Output Layer -->
-                                <div
-                                    style="
-                                        display: flex;
-                                        gap: 1rem;
-                                        justify-content: center;
-                                    "
-                                >
-                                    <div
-                                        class="arch-box"
-                                        style="
-                                            min-width: 140px;
-                                            font-size: 0.85em;
-                                        "
-                                    >
-                                        <strong>IB TWS API</strong><br />
-                                        <span class="small-text"
-                                            >Live Trading</span
-                                        >
+                                <!-- Outputs -->
+                                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <div class="arch-box" style="padding: 0.6rem; font-size: 0.7em; min-width: 120px;">
+                                        <strong>IB TWS API</strong><br>
+                                        <span class="small-text">Live Trading</span>
                                     </div>
-                                    <div
-                                        class="arch-box"
-                                        style="
-                                            min-width: 140px;
-                                            font-size: 0.85em;
-                                        "
-                                    >
-                                        <strong>Monitoring</strong><br />
-                                        <span class="small-text"
-                                            >Grafana<br />Alerts</span
-                                        >
+                                    <div class="arch-box" style="padding: 0.6rem; font-size: 0.7em; min-width: 120px;">
+                                        <strong>Monitoring</strong><br>
+                                        <span class="small-text">Grafana, Alerts</span>
                                     </div>
-                                    <div
-                                        class="arch-box"
-                                        style="
-                                            min-width: 140px;
-                                            font-size: 0.85em;
-                                        "
-                                    >
-                                        <strong>Audit Log</strong><br />
-                                        <span class="small-text"
-                                            >Compliance<br />Reporting</span
-                                        >
+                                    <div class="arch-box" style="padding: 0.6rem; font-size: 0.7em; min-width: 120px;">
+                                        <strong>Audit Log</strong><br>
+                                        <span class="small-text">Compliance</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                </section>
-
-                <section>
-                    <h2>OpenClaw: Performance</h2>
-                        <div class="two-column" style="font-size: 0.72em">
-                            <div>
-                                <h4 style="font-size: 1.1em">System & Risk</h4>
-                                <ul style="line-height: 1.3">
-                                    <li>
-                                        <strong>Uptime:</strong> 99.8% (24/7)
-                                    </li>
-                                    <li>
-                                        <strong>Latency:</strong> <5ms data to
-                                        decision
-                                    </li>
-                                    <li>
-                                        <strong>Throughput:</strong> 10K+
-                                        ticks/sec
-                                    </li>
-                                    <li><strong>Max drawdown:</strong> 8.5%</li>
-                                    <li><strong>Sharpe ratio:</strong> 1.8</li>
-                                    <li>
-                                        <strong>VaR (95%):</strong> $2,500 daily
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 style="font-size: 1.1em">Trading & ML</h4>
-                                <ul style="line-height: 1.3">
-                                    <li><strong>Trades/day:</strong> 45-60</li>
-                                    <li><strong>Win rate:</strong> 58%</li>
-                                    <li>
-                                        <strong>Avg hold:</strong> 4.2 hours
-                                    </li>
-                                    <li>
-                                        <strong>Model accuracy:</strong> 62%
-                                    </li>
-                                    <li><strong>Features:</strong> 180+</li>
-                                    <li>
-                                        <strong>Backtest:</strong> 5 years
-                                        validated
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <p style="margin-top: 0.8rem; font-size: 0.7em">
-                            <span class="emphasis">Note:</span> Illustrative
-                            metrics - customize with your actual data
+                        <p style="font-size: 0.75em; margin-top: 1rem;">
+                            <span class="emphasis">Data → Intelligence → Action</span> &mdash; fully autonomous pipeline from market signals to order execution
                         </p>
                 </section>
+
 
                 <section>
                     <h2>OpenClaw vs. Manual Trading</h2>
@@ -1017,117 +941,117 @@
                         </p>
                 </section>
 
-                <section>
-                    <h2>OpenClaw Tech Stack</h2>
-                        <div class="two-column" style="font-size: 0.7em">
-                            <div>
-                                <h4 style="font-size: 1.15em">Core & Data</h4>
-                                <ul style="line-height: 1.3">
-                                    <li>
-                                        <strong>Python 3.11</strong> - Trading
-                                        logic
-                                    </li>
-                                    <li>
-                                        <strong>NumPy/Pandas</strong> - Data
-                                        analysis
-                                    </li>
-                                    <li>
-                                        <strong>PyTorch</strong> - Deep learning
-                                    </li>
-                                    <li>
-                                        <strong>ib_insync</strong> - IB API
-                                        wrapper
-                                    </li>
-                                    <li>
-                                        <strong>PostgreSQL/TimescaleDB</strong>
-                                        - Storage
-                                    </li>
-                                    <li>
-                                        <strong>Redis</strong> - Real-time
-                                        caching
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 style="font-size: 1.15em">
-                                    Infrastructure
-                                </h4>
-                                <ul style="line-height: 1.3">
-                                    <li>
-                                        <strong>Docker/Kubernetes</strong> -
-                                        Containers
-                                    </li>
-                                    <li>
-                                        <strong>AWS/GCP</strong> - Cloud hosting
-                                    </li>
-                                    <li>
-                                        <strong>Grafana/Prometheus</strong> -
-                                        Monitoring
-                                    </li>
-                                    <li>
-                                        <strong>GitHub Actions</strong> - CI/CD
-                                    </li>
-                                    <li><strong>Jupyter</strong> - Research</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <p style="margin-top: 0.8rem; font-size: 0.75em">
-                            <span class="emphasis">Cost:</span> ~$500/month (vs.
-                            $50K+ traditional)
-                        </p>
-                </section>
+                <!-- <section> -->
+                <!--     <h2>OpenClaw Tech Stack</h2> -->
+                <!--         <div class="two-column" style="font-size: 0.7em"> -->
+                <!--             <div> -->
+                <!--                 <h4 style="font-size: 1.15em">Core & Data</h4> -->
+                <!--                 <ul style="line-height: 1.3"> -->
+                <!--                     <li> -->
+                <!--                         <strong>Python 3.11</strong> - Trading -->
+                <!--                         logic -->
+                <!--                     </li> -->
+                <!--                     <li> -->
+                <!--                         <strong>NumPy/Pandas</strong> - Data -->
+                <!--                         analysis -->
+                <!--                     </li> -->
+                <!--                     <li> -->
+                <!--                         <strong>PyTorch</strong> - Deep learning -->
+                <!--                     </li> -->
+                <!--                     <li> -->
+                <!--                         <strong>ib_insync</strong> - IB API -->
+                <!--                         wrapper -->
+                <!--                     </li> -->
+                <!--                     <li> -->
+                <!--                         <strong>PostgreSQL/TimescaleDB</strong> -->
+                <!--                         - Storage -->
+                <!--                     </li> -->
+                <!--                     <li> -->
+                <!--                         <strong>Redis</strong> - Real-time -->
+                <!--                         caching -->
+                <!--                     </li> -->
+                <!--                 </ul> -->
+                <!--             </div> -->
+                <!--             <div> -->
+                <!--                 <h4 style="font-size: 1.15em"> -->
+                <!--                     Infrastructure -->
+                <!--                 </h4> -->
+                <!--                 <ul style="line-height: 1.3"> -->
+                <!--                     <li> -->
+                <!--                         <strong>Docker/Kubernetes</strong> - -->
+                <!--                         Containers -->
+                <!--                     </li> -->
+                <!--                     <li> -->
+                <!--                         <strong>AWS/GCP</strong> - Cloud hosting -->
+                <!--                     </li> -->
+                <!--                     <li> -->
+                <!--                         <strong>Grafana/Prometheus</strong> - -->
+                <!--                         Monitoring -->
+                <!--                     </li> -->
+                <!--                     <li> -->
+                <!--                         <strong>GitHub Actions</strong> - CI/CD -->
+                <!--                     </li> -->
+                <!--                     <li><strong>Jupyter</strong> - Research</li> -->
+                <!--                 </ul> -->
+                <!--             </div> -->
+                <!--         </div> -->
+                <!--         <p style="margin-top: 0.8rem; font-size: 0.75em"> -->
+                <!--             <span class="emphasis">Cost:</span> ~$500/month (vs. -->
+                <!--             $50K+ traditional) -->
+                <!--         </p> -->
+                <!-- </section> -->
 
-                <section>
-                    <h2>Lessons Learned</h2>
-                        <div class="two-column" style="font-size: 0.7em">
-                            <div>
-                                <h4 style="font-size: 1.15em">Challenges</h4>
-                                <ul style="line-height: 1.3">
-                                    <li>
-                                        <strong>Data quality</strong> - Robust
-                                        cleaning needed
-                                    </li>
-                                    <li>
-                                        <strong>API reliability</strong> -
-                                        Auto-reconnect logic
-                                    </li>
-                                    <li>
-                                        <strong>Overfitting</strong> -
-                                        Walk-forward validation
-                                    </li>
-                                    <li>
-                                        <strong>Slippage</strong> - 3x higher
-                                        than backtest
-                                    </li>
-                                    <li>
-                                        <strong>24/7 monitoring</strong> - Alert
-                                        systems critical
-                                    </li>
-                                    <li>
-                                        <strong>Debugging live</strong> -
-                                        Extensive logging
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 style="font-size: 1.15em">What Worked</h4>
-                                <ul style="line-height: 1.3">
-                                    <li>✅ Conservative risk limits</li>
-                                    <li>✅ Extensive paper trading</li>
-                                    <li>✅ Simple strategies first</li>
-                                    <li>✅ Continuous monitoring</li>
-                                    <li>✅ Kill switch (flatten all)</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <p
-                            class="fragment"
-                            style="margin-top: 0.8rem; font-size: 0.75em"
-                        >
-                            <span class="emphasis">Key lesson:</span> Building
-                            is 20%, testing/monitoring/maintaining is 80%
-                        </p>
-                </section>
+                <!-- <section> -->
+                <!--     <h2>Lessons Learned</h2> -->
+                <!--         <div class="two-column" style="font-size: 0.7em"> -->
+                <!--             <div> -->
+                <!--                 <h4 style="font-size: 1.15em">Challenges</h4> -->
+                <!--                 <ul style="line-height: 1.3"> -->
+                <!--                     <li> -->
+                <!--                         <strong>Data quality</strong> - Robust -->
+                <!--                         cleaning needed -->
+                <!--                     </li> -->
+                <!--                     <li> -->
+                <!--                         <strong>API reliability</strong> - -->
+                <!--                         Auto-reconnect logic -->
+                <!--                     </li> -->
+                <!--                     <li> -->
+                <!--                         <strong>Overfitting</strong> - -->
+                <!--                         Walk-forward validation -->
+                <!--                     </li> -->
+                <!--                     <li> -->
+                <!--                         <strong>Slippage</strong> - 3x higher -->
+                <!--                         than backtest -->
+                <!--                     </li> -->
+                <!--                     <li> -->
+                <!--                         <strong>24/7 monitoring</strong> - Alert -->
+                <!--                         systems critical -->
+                <!--                     </li> -->
+                <!--                     <li> -->
+                <!--                         <strong>Debugging live</strong> - -->
+                <!--                         Extensive logging -->
+                <!--                     </li> -->
+                <!--                 </ul> -->
+                <!--             </div> -->
+                <!--             <div> -->
+                <!--                 <h4 style="font-size: 1.15em">What Worked</h4> -->
+                <!--                 <ul style="line-height: 1.3"> -->
+                <!--                     <li>✅ Conservative risk limits</li> -->
+                <!--                     <li>✅ Extensive paper trading</li> -->
+                <!--                     <li>✅ Simple strategies first</li> -->
+                <!--                     <li>✅ Continuous monitoring</li> -->
+                <!--                     <li>✅ Kill switch (flatten all)</li> -->
+                <!--                 </ul> -->
+                <!--             </div> -->
+                <!--         </div> -->
+                <!--         <p -->
+                <!--             class="fragment" -->
+                <!--             style="margin-top: 0.8rem; font-size: 0.75em" -->
+                <!--         > -->
+                <!--             <span class="emphasis">Key lesson:</span> Building -->
+                <!--             is 20%, testing/monitoring/maintaining is 80% -->
+                <!--         </p> -->
+                <!-- </section> -->
 
                 <!-- AI Agents in Financial Transactions -->
                 <section>
